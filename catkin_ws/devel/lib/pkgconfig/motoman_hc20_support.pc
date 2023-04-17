@@ -1,0 +1,1 @@
+/home/etudiant/Projet/projet_inte_robotique/catkin_ws/devel/.private/motoman_hc20_support/lib/pkgconfig/motoman_hc20_support.pc

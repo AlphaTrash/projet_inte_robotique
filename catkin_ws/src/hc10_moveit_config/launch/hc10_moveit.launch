@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="hc10_moveit" pkg="hc10_moveit_config" type="moveit.py" respawn="false" output="screen">
+  </node>
+
+</launch>

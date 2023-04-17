@@ -1,0 +1,1 @@
+/home/etudiant/Projet/projet_inte_robotique/catkin_ws/devel/.private/motoman_resources/share/motoman_resources/cmake/motoman_resourcesConfig.cmake
