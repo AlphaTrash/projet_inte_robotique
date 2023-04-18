@@ -58,20 +58,20 @@ print(robot.get_current_state())
 print("")
 
 # We get the joint values from the group and change some of the values:
-joint_goal = move_group.get_current_joint_values()
-joint_goal[0] = 0
-joint_goal[1] = -tau / 8
-joint_goal[2] = 0
-joint_goal[3] = -tau / 4
-joint_goal[4] = 0
-joint_goal[5] = tau / 6  # 1/6 of a turn
+# joint_goal = move_group.get_current_joint_values()
+# joint_goal[0] = 0
+# joint_goal[1] = -tau / 8
+# joint_goal[2] = 0
+# joint_goal[3] = 0
+# joint_goal[4] = 0
+# joint_goal[5] = 0
 
 # The go command can be called with joint values, poses, or without any
 # parameters if you have already set the pose or joint target for the group
-move_group.go(joint_goal, wait=True)
+#move_group.go(joint_goal, wait=True)
 
 # Calling ``stop()`` ensures that there is no residual movement
-move_group.stop()
+#move_group.stop()
 
 pose_goal = geometry_msgs.msg.Pose()
 pose_goal.orientation.w = 1.0
@@ -82,12 +82,12 @@ pose_goal.position.z = 0.4
 move_group.set_pose_target(pose_goal)
 
 # `go()` returns a boolean indicating whether the planning and execution was successful.
-success = move_group.go(wait=True)
+#success = move_group.go(wait=True)
 # Calling `stop()` ensures that there is no residual movement
-move_group.stop()
+#move_group.stop()
 # It is always good to clear your targets after planning with poses.
 # Note: there is no equivalent function for clear_joint_value_targets().
-move_group.clear_pose_targets()
+#move_group.clear_pose_targets()
 
 # cartesian
 waypoints = []
@@ -119,7 +119,7 @@ display_trajectory.trajectory.append(plan)
 display_trajectory_publisher.publish(display_trajectory)
 
 move_group.execute(plan, wait=True)
-
+"""
 box_pose = geometry_msgs.msg.PoseStamped()
 box_pose.header.frame_id = "hand"
 box_pose.pose.orientation.w = 1.0
@@ -152,3 +152,4 @@ touch_links = robot.get_link_names(group=grasping_group)
 scene.attach_box(eef_link, box_name, touch_links=touch_links)
 scene.remove_attached_object(eef_link, name=box_name)
 scene.remove_world_object(box_name)
+"""

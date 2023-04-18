@@ -10,6 +10,7 @@ node [shape=box];
 "link_5_b" [label="link_5_b"];
 "link_6_t" [label="link_6_t"];
 "tool0" [label="tool0"];
+"camera_depth_frame" [label="camera_depth_frame"];
 node [shape=ellipse, color=blue, fontcolor=blue];
 "world" -> "world_fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
 "world_fixed" -> "base_link"
@@ -29,4 +30,6 @@ node [shape=ellipse, color=blue, fontcolor=blue];
 "joint_6_t" -> "link_6_t"
 "link_6_t" -> "joint_6_t-tool0" [label="xyz: 0 0 -0.13 \nrpy: 3.14159 -0 0"]
 "joint_6_t-tool0" -> "tool0"
+"tool0" -> "joint_7_camera" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"joint_7_camera" -> "camera_depth_frame"
 }
