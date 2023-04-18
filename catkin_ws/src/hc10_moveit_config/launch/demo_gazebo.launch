@@ -19,6 +19,8 @@
     <arg name="moveit_controller_manager" value="ros_control" />
   </include>
 
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
-  <node pkg="tf" type="static_transform_publisher" name="camera_to_optical_tf" args="0 0 0 4.71238898038 0 -1.57019632679 camera_rgb_frame camera_depth_optical_frame 10" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_to_optical_tf" args="0 0 0 4.71238898038 0 -1.57019632679 camera_depth_frame camera_depth_optical_frame 10" />
+
+
 </launch>

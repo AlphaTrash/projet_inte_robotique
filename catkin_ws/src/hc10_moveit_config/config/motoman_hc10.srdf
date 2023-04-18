@@ -16,6 +16,8 @@
         <joint name="joint_4_r"/>
         <joint name="joint_5_b"/>
         <joint name="joint_6_t"/>
+        <joint name="joint_6_t-tool0"/>
+        <joint name="world_fixed"/>
     </group>
     <group name="hand">
         <link name="tool0"/>
